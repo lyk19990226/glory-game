@@ -1,0 +1,97 @@
+.right-nav {
+  position: fixed;
+  z-index: 9;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 314px;
+  height: 494px;
+  background: url(../images/r_navBg.png) no-repeat top center;
+}
+.right-nav .right-dj {
+  position: relative;
+  left: 33px;
+  width: 165px;
+  height: 145px;
+  background: url(../images/r_dj.png) no-repeat top center;
+}
+.right-nav .right-dj .dj-txt {
+  position: absolute;
+  top: 37px;
+  left: 12px;
+  width: 88px;
+  height: 36px;
+  text-indent: 2px;
+  font-weight: bold;
+  line-height: 18px;
+  color: #62401b;
+  overflow: hidden;
+  /* pointer-events: none;表面理解：无法拖动鼠标选中复制文本
+      且默认设置了cursor: default; */
+  pointer-events: none;
+}
+.right-nav .qr-code-list {
+  margin: 0 auto;
+  width: 117px;
+}
+.right-nav .qr-code-list .item-one {
+  padding: 2px 0;
+  background-position: 0 -3px;
+  text-align: center;
+}
+.right-nav .qr-code-list .item-one img {
+  width: 111px;
+  height: 110px;
+}
+.right-nav .qr-code-list > li {
+  position: relative;
+}
+.right-nav .qr-code-list > li > a.item {
+  height: 38px;
+}
+.right-nav .qr-code-list > li > .item-wb {
+  background-position: -122px -120px;
+}
+.right-nav .qr-code-list > li > .item-wb:hover {
+  background-position: -122px -240px;
+}
+.right-nav .qr-code-list > li > .item-wx {
+  background-position: -122px -160px;
+}
+.right-nav .qr-code-list > li > .item-wx:hover {
+  background-position: -122px -200px;
+}
+.right-nav .qr-code-list > li > .item-gf {
+  background-position: -122px 0;
+}
+.right-nav .qr-code-list > li > .item-gf:hover {
+  background-position: -122px -42px;
+}
+.right-nav .qr-code-list > li .public_qrcode {
+  position: absolute;
+  left: -115px;
+  top: 0;
+  transform: translate(0, -50%);
+  width: 115px;
+  height: 144px;
+  padding-top: 7px;
+  text-align: center;
+  background-position: 0 -416px;
+  color: #dcdcdc;
+  font-size: 12px;
+  opacity: 0;
+}
+.right-nav .qr-code-list > li .public_qrcode img {
+  width: 101px;
+  height: 100px;
+}
+.right-nav .qr-code-list > li .public_qrcode > p {
+  margin-top: 2px;
+}
+.right-nav .qr-code-list > li .public_qrcode > p > span {
+  color: #cd974b;
+}
+.right-nav .qr-code-list > li > a.item:hover + .public_qrcode {
+  opacity: 1;
+  transition: opacity 0.6s ease;
+}

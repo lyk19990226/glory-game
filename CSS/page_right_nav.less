@@ -1,0 +1,116 @@
+.right-nav {
+  position: fixed;
+  z-index: 9;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 314px;
+  height: 494px;
+  background: url(../images/r_navBg.png) no-repeat top center;
+
+  .right-dj {
+    position: relative;
+    left: 33px;
+    width: 165px;
+    height: 145px;
+    background: url(../images/r_dj.png) no-repeat top center;
+
+    .dj-txt {
+      position: absolute;
+      top: 37px;
+      left: 12px;
+      width: 88px;
+      height: 36px;
+      text-indent: 2px;
+      font-weight: bold;
+      line-height: 18px;
+      color: #62401b;
+      overflow: hidden;
+      /* pointer-events: none;表面理解：无法拖动鼠标选中复制文本
+      且默认设置了cursor: default; */
+      pointer-events: none;
+    }
+  }
+
+  .qr-code-list {
+    margin: 0 auto;
+    width: 117px;
+
+    .item-one {
+      padding: 2px 0;
+      background-position: 0 -3px;
+      text-align: center;
+
+      img {
+        width: 111px;
+        height: 110px;
+      }
+    }
+
+    >li {
+      position: relative;
+
+      >a.item {
+        height: 38px;
+      }
+
+      >.item-wb {
+        background-position: -122px -120px;
+      }
+
+      >.item-wb:hover {
+        background-position: -122px -240px;
+      }
+
+      >.item-wx {
+        background-position: -122px -160px;
+      }
+
+      >.item-wx:hover {
+        background-position: -122px -200px;
+      }
+
+      >.item-gf {
+        background-position: -122px 0;
+      }
+
+      >.item-gf:hover {
+        background-position: -122px -42px;
+      }
+
+      .public_qrcode {
+        position: absolute;
+        left: -115px;
+        top: 0;
+        transform: translate(0, -50%; );
+        width: 115px;
+        height: 144px;
+        padding-top: 7px;
+        text-align: center;
+        background-position: 0 -416px;
+        color: #dcdcdc;
+        font-size: 12px;
+        opacity: 0;
+
+        img {
+          width: 101px;
+          height: 100px;
+        }
+
+        >p {
+          margin-top: 2px;
+
+          >span {
+            color: #cd974b;
+          }
+        }
+      }
+
+      >a.item:hover+.public_qrcode {
+        opacity: 1;
+        transition: opacity .6s ease;
+      }
+    }
+
+  }
+}

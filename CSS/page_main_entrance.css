@@ -1,0 +1,19 @@
+.main .entrance-section {
+  display: flex;
+  justify-content: space-between;
+  margin: 28px auto 34px;
+}
+.main .entrance-section .item a {
+  display: block;
+  width: 291px;
+  height: 134px;
+  overflow: hidden;
+}
+.main .entrance-section .item a img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s ease;
+}
+.main .entrance-section .item a:hover img {
+  transform: scale(1.1);
+}

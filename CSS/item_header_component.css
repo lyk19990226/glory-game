@@ -1,0 +1,56 @@
+/* item_header 模块的复用 */
+.content_icon {
+  background-position: 0 -106px;
+
+}
+
+.hero_skin_icon {
+  background-position: 0 -144px;
+
+}
+
+.match_icon {
+  background-position: 0 -184px;
+}
+
+.kpl_schedule_icon {
+  background-position: -157px -106px
+}
+
+.item_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.item_header .header_title {
+  height: 26px;
+  line-height: 26px;
+  font-size: 22px;
+  /* padding-left: 33px; */
+  text-indent: 33px;
+}
+
+.item_header .more {
+  padding-left: 22px;
+  background-position: -252px 4px;
+  color: #999;
+}
+
+.item_header .more:hover {
+  color: #f3c258;
+}
+
+.item_header .ticket_purchase {
+  margin-left: 14px;
+  padding: 0 8px 0 30px;
+  border: 1px solid #f3c258;
+  border-radius: 3px;
+  text-align: center;
+  background-position: -243px -85px;
+}
+
+.item_header .ticket_purchase_none {
+  display: none;
+}

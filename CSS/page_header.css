@@ -1,0 +1,142 @@
+.header {
+  /* 粘性定位3行代码,测试用 */
+  /* position: sticky;
+  z-index: 9999;
+  top: 41px; */
+  position: relative;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, .8);
+}
+
+.header .area {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  height: 84px;
+}
+
+.header .area .left-area {
+  display: flex;
+}
+
+.header .area .left-area .logo a {
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+  display: block;
+  width: 200px;
+  height: 54px;
+  background: url(../images/logo.png) no-repeat center center;
+  text-indent: -9999px;
+}
+
+.header .area .left-area .nav-list {
+  display: flex;
+  margin-left: 30px;
+}
+
+.header .area .left-area .nav-list .item {
+  width: 110px;
+  padding-right: 5px;
+}
+
+.header .area .left-area .nav-list .item:hover,
+.header .area .left-area .nav-list .item.active {
+  background: url(../images/main_sprite.png) no-repeat 0 0;
+}
+
+.header .area .left-area .nav-list .item a {
+  display: block;
+  height: 100%;
+  box-sizing: border-box;
+  padding-top: 20px;
+  font-size: 18px;
+  color: #c9c9dd;
+  text-align: center;
+}
+
+.header .area .left-area .nav-list .item:hover a,
+.header .area .left-area .nav-list .item.active a {
+  color: #e4b653;
+}
+
+.header .area .left-area .nav-list .item .desc {
+  display: block;
+  font-size: 12px;
+  color: #858792;
+}
+
+.header .area .left-area .nav-list .item:hover .desc,
+.header .area .left-area .nav-list .item.active .desc {
+  color: #91763f;
+}
+
+.header .area .left-area .search a {
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+  display: block;
+  width: 27px;
+  height: 26px;
+  background: url(../images/nav_search.png) no-repeat;
+}
+
+.header .area .right-area {
+  display: flex;
+  align-items: center;
+  color: #858792;
+}
+
+.header .area .right-area .image {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  margin-right: 7px;
+}
+
+.header .area .right-area .image img {
+  border-radius: 42px;
+  border: 1px solid #d9ad50;
+}
+
+.header .area .right-area .info a {
+  color: #fff;
+}
+
+.header .sub-nav {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, .7);
+  transition: all .4s;
+  height: 0;
+  overflow: hidden;
+}
+
+.header:hover .sub-nav {
+  height: 285px;
+}
+
+.header .sub-nav .sub-nav-list {
+  display: flex;
+  padding: 15px 60px 30px 25px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.header .sub-nav .sub-nav-list .item {
+  flex: 1;
+}
+
+.header .sub-nav .sub-nav-list .item a {
+  position: relative;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  color: #c9c9dd;
+}
+
+.header .sub-nav .sub-nav-list .item a:hover {
+  color: #f3c258;
+  text-decoration: underline;
+}

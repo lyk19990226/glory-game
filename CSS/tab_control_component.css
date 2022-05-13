@@ -1,0 +1,48 @@
+/* tab_control模块复用 */
+.tab_control {
+  display: flex;
+  text-align: center;
+  background: #f5f5f5;
+  line-height: 29px;
+}
+
+/* item默认平分宽度 */
+.tab_control>.item {
+  flex: 1;
+  height: 29px;
+  border-bottom: 3px solid transparent;
+}
+
+/* item扩展.content_width;item根据内容确定宽度 */
+.tab_control>.item.content_width {
+  /* 这里flex:0;相当于flex：0 1 0； 
+     flex-grow:0;则此时盒子宽度不拉伸；
+     flex-basis:0;且盒子宽度由设置的width决定（注意：该情况下如果盒子里面的内容是英文，盒子宽度会被英文单词撑起来；汉字则不会） */
+  /* flex:0; */
+
+  /* 这里flex-grow:0;所以盒子宽度不进行拉伸  
+     flex-basis:auto; 所以盒子宽度由由内容决定 */
+  flex:0 auto;
+  padding: 0 27px;
+}
+
+.tab_control>.item>a {
+  display: block;
+  height: 100%;
+  color: #999;
+  box-sizing: border-box;
+}
+
+.tab_control>.item:hover,
+.tab_control>.item.active {
+  color: #333;
+  border-bottom: 3px solid #f3c258;
+}
+
+.tab_control>.line {
+  display: inline-block;
+  width: 1px;
+  height: 22px;
+  background: #e1e1e1;
+  margin-top: 5px;
+}

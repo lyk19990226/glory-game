@@ -1,0 +1,244 @@
+.main {
+  position: relative;
+  z-index: 9;
+  padding-top: 450px;
+}
+.main .section-content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+.main .section-content .left-content {
+  width: 872px;
+}
+.main .section-content .left-content .content-center .item-thirdnav {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 8px 0 9px;
+}
+.main .section-content .left-content .content-center .item-thirdnav .item {
+  display: inline-block;
+  height: 24px;
+  line-height: 24px;
+  padding: 0 8px 0 13px;
+  margin: 0 8px 8px 0;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  background: #f5f5f5;
+}
+.main .section-content .left-content .content-center .item-thirdnav .item:hover,
+.main .section-content .left-content .content-center .item-thirdnav .active {
+  border-color: #f3c258;
+  background: #f3c258;
+  color: #fff;
+}
+.main .section-content .left-content .match-center .match-news {
+  display: flex;
+  margin: 19px 0 15px 0;
+}
+.main .section-content .left-content .match-center .match-news .match-left > a {
+  display: block;
+  width: 211px;
+  height: 260px;
+}
+.main .section-content .left-content .match-center .match-news .match-left > a > img {
+  width: 100%;
+  height: 100%;
+}
+.main .section-content .left-content .match-center .match-news .match-right {
+  flex: 1;
+  overflow: hidden;
+  padding-left: 20px;
+}
+.main .section-content .left-content .match-center .match-news .match-right .match-header {
+  padding: 0 64px 10px 0;
+}
+.main .section-content .left-content .match-center .match-news .match-right .match-header .match-header-title {
+  font-size: 24px;
+  font-weight: 400;
+}
+.main .section-content .left-content .match-center .match-news .match-right .match-header .match-header-title:hover {
+  text-decoration: underline;
+}
+.main .section-content .left-content .match-center .match-news .match-right .match-header .match-header-desc {
+  padding-right: 127px;
+  line-height: 23px;
+  color: #666666;
+}
+.main .section-content .left-content .match-center .match-news .match-right .match-list > .item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 9px;
+}
+.main .section-content .left-content .match-center .match-news .match-right .match-list > .item > .item-left {
+  flex: 1;
+}
+.main .section-content .left-content .match-center .match-news .match-right .match-list > .item > .item-left .match-desc-details:hover {
+  text-decoration: underline;
+}
+.main .section-content .left-content .match-center .match-news .match-right .match-list > .item .match-date {
+  padding-left: 80px;
+  font-size: 12px;
+  color: #b8b9c5;
+}
+.main .section-content .right-content {
+  width: 295px;
+}
+.main .section-content .right-content .hero-skin-content {
+  height: 528px;
+}
+.main .section-content .right-content .hero-skin-content .new-hero-content {
+  margin: 16px 0 10px 0;
+}
+.main .section-content .right-content .hero-skin-content .new-hero-content .newest-hero > a {
+  display: inline-block;
+}
+.main .section-content .right-content .hero-skin-content .new-hero-content .newest-hero > a > img {
+  width: 295px;
+  border-radius: 2px;
+}
+.main .section-content .right-content .hero-skin-content .new-hero-content .newest-hero .hero-detail {
+  padding: 10px 15px;
+  border: 1px solid #e5e5e5;
+  border-top: none;
+  border-radius: 0 0 2px 2px;
+}
+.main .section-content .right-content .hero-skin-content .new-hero-content .newest-hero .hero-detail .new-hero-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+.main .section-content .right-content .hero-skin-content .new-hero-content .newest-hero .hero-detail .go-online-date {
+  color: #999999;
+  font-size: 12px;
+}
+.main .section-content .right-content .hero-skin-content .new-hero-content .hero-exhibition-list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.main .section-content .right-content .hero-skin-content .new-hero-content .hero-exhibition-list .hero-item {
+  position: relative;
+}
+.main .section-content .right-content .hero-skin-content .new-hero-content .hero-exhibition-list .hero-item > a {
+  display: block;
+}
+.main .section-content .right-content .hero-skin-content .new-hero-content .hero-exhibition-list .hero-item > a .hero-mask {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #f3c258;
+  writing-mode: vertical-lr;
+  letter-spacing: 0.3em;
+  word-break: break-all;
+  opacity: 0;
+  transition: opacity 700ms ease;
+}
+.main .section-content .right-content .hero-skin-content .new-hero-content .hero-exhibition-list .hero-item:hover .hero-mask {
+  opacity: 1;
+}
+.main .section-content .right-content .kpl-race-content {
+  /*该是之前方案的样式,我们只是改用了为表格方案
+        .race-information {
+
+          .race-desc {
+            display: flex;
+            height: 32px;
+            line-height: 32px;
+            text-align: center;
+            color: #999;
+            background-color: #f5f5f5;
+
+            .desc-col-one {
+              flex: 6;
+            }
+
+            .desc-col-two {
+              flex: 8;
+            }
+
+            .desc-col-three {
+              flex: 2;
+            }
+          }
+
+          .race-detail {
+            display: flex;
+            height: 67px;
+            line-height: 67px;
+            border-bottom: 1px solid #e5e5e5;
+
+            text-align: center;
+
+            .detail-col-one {
+              flex: 6;
+              font-size: 12px;
+            }
+
+            .detail-col-two {
+              position: relative;
+              flex: 8;
+              font-size: 12px;
+              padding-top: 10px;
+
+              .team-name-icon {
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                width: 25px;
+                height: 25px;
+              }
+
+              em {
+                line-height: 77px;
+              }
+            }
+
+            .detail-col-three {
+              flex: 2;
+              color: #f3c258;
+            }
+          }
+        }*/
+}
+.main .section-content .right-content .kpl-race-content .schedule-time {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+.main .section-content .right-content .kpl-race-content .schedule-time thead tr {
+  height: 32px;
+  color: #999;
+  background: #f5f5f5;
+}
+.main .section-content .right-content .kpl-race-content .schedule-time tbody {
+  font-size: 12px;
+}
+.main .section-content .right-content .kpl-race-content .schedule-time tbody tr {
+  border-bottom: 1px solid #e5e5e5;
+}
+.main .section-content .right-content .kpl-race-content .schedule-time tbody tr td:nth-child(3) {
+  color: #f3c258;
+  font-size: 14px;
+}
+.main .section-content .right-content .kpl-race-content .schedule-time tbody tr td:nth-child(2),
+.main .section-content .right-content .kpl-race-content .schedule-time tbody tr td:nth-child(4) {
+  padding: 10px 0;
+}
+.main .section-content .right-content .kpl-race-content .schedule-time tbody .team-img {
+  margin-bottom: 5px;
+}
+.main .section-content .right-content .kpl-race-content .schedule-time tbody .team-img img {
+  width: 25px;
+  height: 25px;
+}
+.main .section-content .right-content .kpl-race-content .race-adver {
+  display: block;
+  margin-top: 20px;
+}

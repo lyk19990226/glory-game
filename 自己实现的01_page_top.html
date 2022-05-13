@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./CSS/reset.css">
+  <link rel="stylesheet" href="./CSS/common.css">
+  <title>Document</title>
+  <style>
+    .top {
+      border: 1px solid #f5f5f5;
+      height: 1000px;
+    }
+
+    .top .area {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      height: 41px;
+      line-height: 41px;
+    }
+
+    .top .left-area {
+      display: flex;
+    }
+
+    .top .left-area .logo a {
+      position: relative;
+      z-index: 3;
+      display: block;
+      width: 150px;
+      text-indent: -9999px;
+      background: url(./images/top_logo.png) top center no-repeat;
+    }
+
+    .top .left-area .recommend .recommend_big {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 2;
+      width: 970px;
+      background-color: #fff;
+      padding: 0 3px 3px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .top .left-area .recommend:hover .recommend_big {
+      display: block;
+    }
+
+
+
+    .top .right-area {
+      display: flex;
+    }
+
+    .top .right-area .item a {
+      position: relative;
+    }
+
+    .top .right-area .item a.growth {
+      padding-left: 30px;
+    }
+
+    .top .right-area .item a.growth .icon-grow {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto 0;
+      width: 30px;
+      height: 30px;
+      background: url(./images/top_sprite.png) no-repeat -30px 0;
+    }
+
+    .top .right-area .item a {
+      display: block;
+    }
+
+    .top .right-area .item a.ranking {
+      margin-left: 20px;
+      padding-right: 25px;
+    }
+
+    .top .right-area .item a.ranking::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      width: 30px;
+      height: 30px;
+      background: url(./images/top_sprite.png) no-repeat 0 0;
+      opacity: 0.1;
+      transform: rotate(0.25turn);
+    }
+
+    .top .area .ranking-modular {
+      position: absolute;
+      right: 0;
+      top: 41px;
+      /* display: flex; */
+      display: none;
+      width: 707px;
+      padding-left: 35px;
+      box-sizing: border-box;
+      background: #fafafa;
+    }
+
+    .top .area .ranking-modular .modular-item {
+      flex: 1;
+    }
+
+    .top .area .ranking-modular .modular-item .modular-tilte {
+      position: relative;
+      line-height: 40px;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    .top .area .ranking-modular .modular-item .modular-tilte a {
+      display: block;
+    }
+
+    .top .area .ranking-modular .modular-item .modular-tilte a::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      right: 35px;
+      width: 30px;
+      height: 30px;
+      background: url(./images/title_sprite.png) no-repeat;
+      opacity: .1;
+    }
+
+
+    .top .area .ranking-modular .modular-item .ranking-list {
+      font-size: 12px;
+    }
+
+    .top .area .ranking-modular .modular-item .ranking-list .item {
+      position: relative;
+      margin: 0 24px 24px 0
+    }
+
+    .top .area .ranking-modular .modular-item .ranking-list .item p {
+      line-height: normal;
+      padding-left: 20px;
+    }
+
+    .top .area .ranking-modular .modular-item .ranking-list .item .new-end-swim img {
+      width: 200px;
+    }
+
+    .top .area .ranking-modular .modular-item .ranking-list .item .new-end-swim {
+      display: none;
+      position: absolute;
+      top: 0;
+    }
+
+    .top .area .ranking-modular .modular-item .ranking-list .item .new-end-swim .new-end-swim-b {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      height: 28px;
+      line-height: 28px;
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    .top .area .ranking-modular .modular-item .ranking-list .item .new-end-swim .new-end-swim-b a {
+      flex: 1;
+      text-align: center;
+      color: #fff;
+    }
+
+    .top .area .ranking-modular .modular-item .ranking-list .item:hover,
+    .item_active {
+      height: 90px;
+    }
+
+    .top .area .ranking-modular .modular-item .ranking-list .item:hover .new-end-swim {
+      display: block;
+    }
+
+    .item_active {
+      display: block !important;
+    }
+
+    /* 显示与隐藏 */
+    .top .right-area .item-ranking:hover .ranking-modular {
+      display: flex;
+    }
+
+    .hot_rank_icon {
+      position: absolute;
+      z-index: 3;
+      width: 16px;
+      height: 16px;
+      line-height: 16px;
+      text-align: center;
+      color: #fff;
+      background-color: #c62828;
+    }
+
+    .normal_rank_icon {
+      position: absolute;
+      z-index: 3;
+      width: 16px;
+      height: 16px;
+      line-height: 16px;
+      text-align: center;
+      color: #fff;
+      background-color: #ccc;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="top">
+    <div class="top_wrapper area">
+      <div class="left-area">
+        <h2 class="logo" title="腾讯游戏logo">
+          <a href="#">腾讯游戏logo</a>
+        </h2>
+        <div class="recommend">
+          <img src="./images/recommend_game.jpg" alt>
+          <a href="#" class="recommend_big">
+            <img src="./images/recommend_game_big.jpg" alt="">
+          </a>
+        </div>
+      </div>
+      <ul class="right-area">
+        <li class="item">
+          <a href="#" class="growth">
+            <i class="icon-grow"></i>
+            成长守护平台
+          </a>
+        </li>
+        <li class="item item-ranking">
+          <a href="#" class="ranking">腾讯游戏排行榜</a>
+
+          <div class="ranking-modular">
+            <div class="ranking-left modular-item">
+              <h2 class="modular-tilte">
+                <a href="#">新品端游排行榜</a>
+              </h2>
+              <ul class="ranking-list">
+                <li class="item item_active">
+                  <i class="hot_rank_icon">1</i>
+                  <p>穿越火线</p>
+                  <div class="new-end-swim item_active">
+                    <img src="./images/new_end_swim01.jpg" alt="">
+                    <div class="new-end-swim-b">
+                      <a href="#">进入官网</a>
+                      <a href="#">下载游戏</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="item">
+                  <i class="hot_rank_icon">2</i>
+                  <p>穿越火线</p>
+                  <div class="new-end-swim">
+                    <img src="./images/new_end_swim01.jpg" alt="">
+                    <div class="new-end-swim-b">
+                      <a href="#">进入官网</a>
+                      <a href="#">下载游戏</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="item">
+                  <i class="hot_rank_icon">3</i>
+                  <p>穿越火线</p>
+                  <div class="new-end-swim">
+                    <img src="./images/new_end_swim01.jpg" alt="">
+                    <div class="new-end-swim-b">
+                      <a href="#">进入官网</a>
+                      <a href="#">下载游戏</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="item">
+                  <i class="normal_rank_icon">4</i>
+                  <p>穿越火线</p>
+                  <div class="new-end-swim">
+                    <img src="./images/new_end_swim01.jpg" alt="">
+                    <div class="new-end-swim-b">
+                      <a href="#">进入官网</a>
+                      <a href="#">下载游戏</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="item">
+                  <i class="normal_rank_icon">5</i>
+                  <p>穿越火线</p>
+                  <div class="new-end-swim">
+                    <img src="./images/new_end_swim01.jpg" alt="">
+                    <div class="new-end-swim-b">
+                      <a href="#">进入官网</a>
+                      <a href="#">下载游戏</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="ranking-center modular-item">
+              <h2 class="modular-tilte">
+                <a href="#">新品端游排行榜</a>
+              </h2>
+              <ul class="ranking-list">
+                <li class="item">
+                  <i class="hot_rank_icon">1</i>
+                  <p>穿越火线</p>
+                  <div class="new-end-swim">
+                    <img src="./images/new_end_swim01.jpg" alt="">
+                    <div class="new-end-swim-b">
+                      <a href="#">进入官网</a>
+                      <a href="#">下载游戏</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="item">
+                  <i class="hot_rank_icon">2</i>
+                  <p>穿越火线</p>
+                  <div class="new-end-swim">
+                    <img src="./images/new_end_swim01.jpg" alt="">
+                    <div class="new-end-swim-b">
+                      <a href="#">进入官网</a>
+                      <a href="#">下载游戏</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="item">
+                  <i class="hot_rank_icon">3</i>
+                  <p>穿越火线</p>
+                  <div class="new-end-swim">
+                    <img src="./images/new_end_swim01.jpg" alt="">
+                    <div class="new-end-swim-b">
+                      <a href="#">进入官网</a>
+                      <a href="#">下载游戏</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="item">
+                  <i class="normal_rank_icon">4</i>
+                  <p>穿越火线</p>
+                  <div class="new-end-swim">
+                    <img src="./images/new_end_swim01.jpg" alt="">
+                    <div class="new-end-swim-b">
+                      <a href="#">进入官网</a>
+                      <a href="#">下载游戏</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="item">
+                  <i class="normal_rank_icon">5</i>
+                  <p>穿越火线</p>
+                  <div class="new-end-swim">
+                    <img src="./images/new_end_swim01.jpg" alt="">
+                    <div class="new-end-swim-b">
+                      <a href="#">进入官网</a>
+                      <a href="#">下载游戏</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="ranking-right modular-item">
+              <h2 class="modular-tilte">
+                <a href="#">新品端游排行榜</a>
+              </h2>
+              <ul class="ranking-list">
+                <li class="item">
+                  <i class="hot_rank_icon">1</i>
+                  <p>穿越火线</p>
+                  <div class="new-end-swim">
+                    <img src="./images/new_end_swim01.jpg" alt="">
+                    <div class="new-end-swim-b">
+                      <a href="#">进入官网</a>
+                      <a href="#">下载游戏</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="item">
+                  <i class="hot_rank_icon">2</i>
+                  <p>穿越火线</p>
+                  <div class="new-end-swim">
+                    <img src="./images/new_end_swim01.jpg" alt="">
+                    <div class="new-end-swim-b">
+                      <a href="#">进入官网</a>
+                      <a href="#">下载游戏</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="item">
+                  <i class="hot_rank_icon">3</i>
+                  <p>穿越火线</p>
+                  <div class="new-end-swim">
+                    <img src="./images/new_end_swim01.jpg" alt="">
+                    <div class="new-end-swim-b">
+                      <a href="#">进入官网</a>
+                      <a href="#">下载游戏</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="item">
+                  <i class="normal_rank_icon">4</i>
+                  <p>穿越火线</p>
+                  <div class="new-end-swim">
+                    <img src="./images/new_end_swim01.jpg" alt="">
+                    <div class="new-end-swim-b">
+                      <a href="#">进入官网</a>
+                      <a href="#">下载游戏</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="item">
+                  <i class="normal_rank_icon">5</i>
+                  <p>穿越火线</p>
+                  <div class="new-end-swim">
+                    <img src="./images/new_end_swim01.jpg" alt="">
+                    <div class="new-end-swim-b">
+                      <a href="#">进入官网</a>
+                      <a href="#">下载游戏</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <h2 class="modular-tilte">
+                <a href="#">新品端游排行榜</a>
+              </h2>
+              <ul class="ranking-list">
+                <li class="item">
+                  <i class="hot_rank_icon">1</i>
+                  <p>穿越火线</p>
+                  <div class="new-end-swim">
+                    <img src="./images/new_end_swim01.jpg" alt="">
+                    <div class="new-end-swim-b">
+                      <a href="#">进入官网</a>
+                      <a href="#">
+                        
+                        下载游戏</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="item">
+                  <i class="hot_rank_icon">2</i>
+                  <p>穿越火线</p>
+                  <div class="new-end-swim">
+                    <img src="./images/new_end_swim01.jpg" alt="">
+                    <div class="new-end-swim-b">
+                      <a href="#">进入官网</a>
+                      <a href="#">下载游戏</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="item">
+                  <i class="hot_rank_icon">3</i>
+                  <p>穿越火线</p>
+                  <div class="new-end-swim">
+                    <img src="./images/new_end_swim01.jpg" alt="">
+                    <div class="new-end-swim-b">
+                      <a href="#">进入官网</a>
+                      <a href="#">下载游戏</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="item">
+                  <i class="normal_rank_icon">4</i>
+                  <p>穿越火线</p>
+                  <div class="new-end-swim">
+                    <img src="./images/new_end_swim01.jpg" alt="">
+                    <div class="new-end-swim-b">
+                      <a href="#">进入官网</a>
+                      <a href="#">下载游戏</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="item">
+                  <i class="normal_rank_icon">5</i>
+                  <p>穿越火线</p>
+                  <div class="new-end-swim">
+                    <img src="./images/new_end_swim01.jpg" alt="">
+                    <div class="new-end-swim-b">
+                      <a href="#">进入官网</a>
+                      <a href="#">下载游戏</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>

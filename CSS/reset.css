@@ -1,0 +1,26 @@
+/* 样式重置的CSS */
+body {
+  font: 14px/1.5 "Microsoft YaHei", Tahoma, "simsun", sans-serif;
+  color: #333;
+  min-width: 1300px;
+}
+
+body,h1,h2,h3,h4,h5,h6,ul,ol,li,p {
+  margin: 0;
+  padding: 0;
+}
+em, i, b {
+  font-style: normal;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+img {
+  vertical-align: top;
+}
+
+ul,ol,li {
+  list-style: none;
+}

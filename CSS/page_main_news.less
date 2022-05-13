@@ -1,0 +1,240 @@
+.main {
+  .news_section {
+    position: relative;
+    display: flex;
+    height: 342px;
+    background: url(../images/rotate_bg.png) no-repeat;
+  
+    .main-banner {
+      width: 605px;
+      box-sizing: border-box;
+      padding-right: 1px;
+  
+      .banner-img-list {
+        height: 298px;
+        overflow: hidden;
+  
+        .banner-content {
+          display: flex;
+          animation: lyk 20s infinite ease-in-out;
+  
+          @keyframes lyk {
+            from {
+              transform: translate(0, 0)
+            }
+  
+            25% {
+              transform: translate(-604px, 0)
+            }
+  
+            50% {
+              transform: translate(-1208px, 0)
+            }
+  
+            75% {
+              transform: translate(-1812px, 0)
+            }
+  
+            to {
+              transform: translate(-2416px, 0)
+            }
+          }
+        }
+  
+  
+      }
+  
+      .banner-img-list:hover .banner-content {
+        // transform: translate(-604*2px,0);
+        // transition: all 100ms;
+      }
+  
+      .banner-list {
+        display: flex;
+        height: 44px;
+        line-height: 44px;
+        text-align: center;
+  
+        .list {
+          flex: 1;
+          color: #b1b2be;
+        }
+  
+        .list:hover,
+        .active {
+          background-color: rgba(255, 255, 255, .15);
+          color: #f3c258;
+        }
+      }
+    }
+  
+    .main-news {
+      flex: 1;
+      padding: 0 17px;
+  
+      a {
+        color: #b8b9c5;
+      }
+  
+      .news-t-list {
+        display: flex;
+        position: relative;
+        box-sizing: border-box;
+        text-align: center;
+  
+        ul {
+          display: flex;
+          flex: 1;
+          height: 48px;
+          line-height: 48px;
+          padding-right: 52px;
+          border-bottom: 1px solid #000;
+  
+  
+          .list {
+            flex: 1;
+            transition: all 0.3s ease-in;
+  
+            a {
+              display: block;
+            }
+          }
+  
+          .item:hover,
+          .active {
+            border-bottom: 3px solid #f3c258;
+  
+            a {
+              color: #f3c258;
+            }
+          }
+        }
+  
+        .item-r {
+          position: absolute;
+          right: 0;
+          top: 10px;
+          width: 52px;
+        }
+      }
+  
+      .news-b-list:hover .news-b-content {
+        transform: translate(-325px, 0);
+      }
+  
+      .news-b-list {
+        width: 325px;
+        overflow: hidden;
+  
+        .news-b-content {
+          display: flex;
+          transition: all 0.3s;
+          width: 500%;
+  
+          .news-list {
+            width: 20%;
+            // 这里的百分20相当于：width: 325px;
+            flex-shrink: 0;
+  
+            .line-sp {
+              height: 36px;
+              line-height: 36px;
+              padding: 0 15px;
+              margin-top: 18px;
+              font-size: 18px;
+              color: #f3c258;
+              background: #414046;
+  
+              a {
+                display: block;
+                width: 230px;
+                color: #f3c258;
+              }
+            }
+            .line:nth-child(n+2) {
+              height: 21px;
+            }
+            .line {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              margin-bottom: 11px;
+  
+              .line-name {
+                width: 230px;
+              }
+  
+              em {
+                font-size: 12px;
+                color: #999;
+              }
+  
+              .new-time {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    .main-download {
+      width: 236px;
+  
+      a {
+        display: block;
+      }
+  
+      .download {
+        height: 128px;
+        background-position: 0 -219px;
+      }
+  
+      .environment {
+        height: 106px;
+        background-position: 0 -350px;
+      }
+  
+      .experience {
+        height: 108px;
+        background-position: 0 -461px;
+      }
+    }
+    .age-appropriate {
+      position: absolute;
+      right: -58px;
+      width: 53px;
+      height: 68px;
+      background: url(../images/age_appropriate.png);
+    }
+    .anti-addiction {
+      position: absolute;
+      top: 78px;
+      right: -58px;
+      width: 53px;
+      height: 47px;
+      background:url(../images/anti_addiction.png) no-repeat 0 0/contain;
+    }
+  }
+  .entrance-section {
+    display: flex;
+    justify-content: space-between;
+    margin: 28px auto 34px;
+    .item {
+      a {
+        display: block;
+        width: 291px;
+        height: 134px;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+          transition: all 0.4s ease;
+        }
+      }
+      a:hover img {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
